@@ -4,7 +4,6 @@ class QtVirtManager < Formula
   url "https://fedorapeople.org/qt-virt-manager/qt-virt-manager-0.??.??.tar.gz"
   sha256 "???"
 
-  depends_on "gobject-introspection" => :build
   depends_on "intltool" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
