@@ -1,4 +1,4 @@
-class QTermWidget5 < Formula
+class QTermWidget < Formula
   desc "A terminal emulator widget for Qt 5"
   homepage "https://github.com/lxde/qtermwidget"
   url "https://f1ash.fedorapeople.org/qt-virt-manager/QTermWidget5/qt5-qtermwidget.zip"
