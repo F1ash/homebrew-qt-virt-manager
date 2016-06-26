@@ -19,7 +19,7 @@ class LibvirtGlib < Formula
                           "--disable-silent-rules",
                           "--enable-introspection",
                           "--prefix=#{prefix}",
-                          "PYTHON=python"
+                          "PYTHON=/usr/local/python"
     system "make", "install"
   end
 end
