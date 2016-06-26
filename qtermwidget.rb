@@ -7,14 +7,16 @@ class Qtermwidget < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "cmake" => :build
+  depends_on "p7zip" => :build
 
   depends_on "qt5"
 
   def install
       mkdir "build" do
+          system "7z", "e", "qt5-qtermwidget.zip"
           system "cmake", ".."
           system "make"
           system "make", "install"
-    end
+      end
   end
 end
