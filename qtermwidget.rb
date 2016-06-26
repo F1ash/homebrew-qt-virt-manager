@@ -13,7 +13,7 @@ class Qtermwidget < Formula
 
   def install
       mkdir "build" do
-          system "7z", "e", "qt5-qtermwidget.zip"
+          system "7z", "e", "../qt5-qtermwidget.zip"
           system "cmake", ".."
           system "make"
           system "make", "install"
