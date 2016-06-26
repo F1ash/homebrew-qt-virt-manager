@@ -14,6 +14,7 @@ class Qtermwidget < Formula
     system "pushd", "build"
     system "cmake", ".."
     system "make"
+    system "popd"
     system "make",  "install"
   end
 end
