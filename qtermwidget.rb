@@ -10,8 +10,8 @@ class Qtermwidget < Formula
   depends_on "qt5"
 
   def install
-    system "mkdir", "-p", "build"
-    system "cd",    "build"
+    system "mkdir", "build"
+    system "pushd", "build"
     system "cmake", ".."
     system "make"
     system "make",  "install"
