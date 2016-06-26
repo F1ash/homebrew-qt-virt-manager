@@ -12,7 +12,6 @@ class Qtermwidget < Formula
 
   def install
     args = std_cmake_args
-    args << "--DCMAKE_INSTALL_PREFIX=#{prefix}"
       mkdir "build" do
           system "cmake", "..", *args
           system "make", "install"
