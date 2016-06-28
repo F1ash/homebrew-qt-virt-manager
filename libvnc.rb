@@ -2,7 +2,7 @@ class Libvnc < Formula
   desc "Cross-platform C libraries for easy implementation of VNC server or client"
   homepage "https://libvnc.github.io/"
   url "https://github.com/LibVNC/libvncserver.git",
-  :revision => "785f0fa2d1fe18f08bf521ed4a0d34a5d0c87782",
+  :revision => "15dd6470c552c7c8c112f0f78bde414b9f6a2714",
   :using => :git
   version "0.9.11rc" # random version
 
