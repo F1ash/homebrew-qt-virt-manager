@@ -29,9 +29,9 @@ class QtVirtManager < Formula
     args<<"-DWITH_LIBCACARD=0"
     args<<"-DBUILD_TYPE=Release"
     args<<"-DUSE_SPICE_AUDIO=1"
-    args<<"-DQT5_LIB_PATH=#{Formula["qt5"].opt_prefix}"
-    args<<"-DVNC_LIB_PATH=#{Formula["libvnc"].opt_prefix}"
-    args<<"-DSPICE_LIB_PATH=#{Formula["spice-protocol"].opt_prefix}"
+    args<<"-DQT5_LIB_PATH=#{Formula["qt5"].Keg}"
+    args<<"-DVNC_LIB_PATH=#{Formula["libvnc"].Keg}"
+    args<<"-DSPICE_LIB_PATH=#{Formula["spice-protocol"].Keg}"
       mkdir "build" do
           system "cmake", "..", *args
           system "make", "install"
