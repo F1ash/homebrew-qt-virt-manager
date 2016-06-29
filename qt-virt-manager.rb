@@ -1,8 +1,11 @@
 class QtVirtManager < Formula
-  desc "Qt App for managing virtual machines"
+  desc "Qt5 Application for managing virtual machines"
   homepage "http://f1ash.github.io/qt-virt-manager/"
-  url "https://fedorapeople.org/qt-virt-manager/qt-virt-manager-0.??.??.tar.gz"
-  sha256 "???"
+  url "https://github.com/F1ash/qt-virt-manager/qt-virt-manager.git",
+  :revision => "1a4a2ed6871af402b899ea97d106df5f5e66e1dc",
+  :using => :git
+  version "0.27.50.dev29.06" # random version
+  #sha256 "???"
 
   depends_on "intltool" => :build
   depends_on "libtool" => :build
@@ -11,30 +14,35 @@ class QtVirtManager < Formula
   depends_on "qt5"
   depends_on "qtermwidget"
   depends_on "glib"
-  depends_on "x11vnc"
+  depends_on "libvnc"
   depends_on "hicolor-icon-theme"
   depends_on "libvirt"
   depends_on "libvirt-glib"
   depends_on "spice-protocol"
+  depends_on "spice-gtk"
   depends_on "usbredir"
-  depends_on "gtk+3"
+  #depends_on "gtk+3"
   depends_on :x11
 
 
   def install
-    system "cmake", "-DBUILD_QT_VERSION=5",
-                    "-DWITH_LIBCACARD=0",
-                    "-DBUILD_TYPE=Release",
-                    "-DUSE_SPICE_AUDIO=1",
-                    ".."
-    system "make",  "all"
-    system "make",  "install"
+    args = std_cmake_args
+    args<<"-DBUILD_QT_VERSION=5"
+    args<<"-DWITH_LIBCACARD=0"
+    args<<"-DBUILD_TYPE=Release"
+    args<<"-DUSE_SPICE_AUDIO=1"
+    args<<"-DQT5_LIB_PATH=$(brew --prefix qt5)"
+    args<<"-DVNC_LIB_PATH=$(brew --prefix libvnc)"
+    args<<"-DSPICE_LIB_PATH=$(brew --prefix spice-protocol)"
+      mkdir "build" do
+          system "cmake", "..", *args
+          system "make", "install"
   end
 
   def post_install
     # manual schema compile step
     system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
     # manual icon cache update step
-    system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
+    #system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
   end
 end
