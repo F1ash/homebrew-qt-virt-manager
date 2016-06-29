@@ -33,7 +33,7 @@ class QtVirtManager < Formula
     args<<"-DVNC_LIB_PATH=#{Formula["libvnc"].prefix}"
     args<<"-DSPICE_LIB_PATH=#{Formula["spice-protocol"].prefix}"
       mkdir "build" do
-          system "cmake", "..", *args
+          system "cmake", ".", *args
           system "make", "install"
       end
   end
