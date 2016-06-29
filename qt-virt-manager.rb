@@ -46,6 +46,8 @@ class QtVirtManager < Formula
   end
 
   test do
-    system "#{Formula["qt-virt-manager"].opt_bin}/qt-virt-manager"
+    system "#{bin}/echo",
+      "#{Formula["qt-virt-manager"].opt_bin}/qt-virt-manager",
+      "built & installed."
   end
 end
