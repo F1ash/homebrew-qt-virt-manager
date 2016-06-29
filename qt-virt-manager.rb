@@ -15,8 +15,6 @@ class QtVirtManager < Formula
   depends_on "qtermwidget"
   depends_on "glib"
   depends_on "libvnc"
-  depends_on "hicolor-icon-theme"
-  depends_on "libvirt"
   depends_on "libvirt-glib"
   depends_on "spice-protocol"
   depends_on "spice-gtk"
