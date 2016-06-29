@@ -10,6 +10,7 @@ class QtVirtManager < Formula
   depends_on "intltool" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
+  depends_on "cmake" => :build
 
   depends_on "qt5"
   depends_on "qtermwidget"
