@@ -44,4 +44,8 @@ class QtVirtManager < Formula
     # manual icon cache update step
     system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
   end
+
+  test do
+    system "#{Formula["qt-virt-manager"].opt_bin}/qt-virt-manager"
+  end
 end
