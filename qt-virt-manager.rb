@@ -37,7 +37,7 @@ class QtVirtManager < Formula
       mkdir "build" do
           system "cmake", "..", *args
           system "make", "install"
-      do
+      end
   end
 
   def post_install
