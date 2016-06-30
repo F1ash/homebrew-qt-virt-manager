@@ -14,12 +14,9 @@ class QtVirtManager < Formula
 
   depends_on "qt5"
   depends_on "qtermwidget"
-  depends_on "glib"
   depends_on "libvnc"
   depends_on "libvirt-glib"
-  depends_on "spice-protocol"
-  depends_on "spice-gtk"
-  depends_on "usbredir"
+  depends_on "spice-client-glib-2.0"
   depends_on :x11
 
 
@@ -33,7 +30,7 @@ class QtVirtManager < Formula
     args<<"-DVNC_LIB_PATH=#{Formula["libvnc"].prefix}"
     args<<"-DSPICE_LIB_PATH=#{Formula["spice-protocol"].prefix}"
       mkdir "build" do
-          system "cmake", ".", *args
+          system "cmake", "..", *args
           system "make", "install"
       end
   end
