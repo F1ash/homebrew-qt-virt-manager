@@ -12,7 +12,6 @@ class QtVirtManager < Formula
   depends_on "pkg-config" => :build
   depends_on "cmake" => :build
 
-  depends_on "qt5"
   depends_on "qtermwidget"
   depends_on "libvnc"
   depends_on "libvirt-glib"
