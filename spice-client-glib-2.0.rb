@@ -1,4 +1,4 @@
-class SpiceClientGlib2 < Formula
+class SpiceClientGlib20 < Formula
   desc "Glib2 client/common libraries for SPICE"
   homepage "http://www.spice-space.org"
   url "http://www.spice-space.org/download/gtk/spice-gtk-0.31.tar.bz2"
