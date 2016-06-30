@@ -12,10 +12,10 @@ class QtVirtManager < Formula
   depends_on "pkg-config" => :build
   depends_on "cmake" => :build
 
+  depends_on "spice-client-glib2"
   depends_on "qtermwidget"
   depends_on "libvnc"
   depends_on "libvirt-glib"
-  depends_on "spice-client-glib-2.0"
   depends_on :x11
 
 

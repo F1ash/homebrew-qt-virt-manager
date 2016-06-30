@@ -1,4 +1,4 @@
-class SpiceClientGlib20 < Formula
+class SpiceClientGlib2 < Formula
   desc "Glib2 client/common libraries for SPICE"
   homepage "http://www.spice-space.org"
   url "http://www.spice-space.org/download/gtk/spice-gtk-0.31.tar.bz2"
@@ -10,8 +10,9 @@ class SpiceClientGlib20 < Formula
   depends_on "gettext" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "jpeg"
   depends_on "glib"
+  depends_on "cairo"
+  depends_on "jpeg"
   depends_on "openssl"
   depends_on "pixman"
   depends_on "spice-protocol"
