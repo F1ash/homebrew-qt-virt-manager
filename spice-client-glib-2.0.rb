@@ -22,6 +22,7 @@ class SpiceClientGlib20 < Formula
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--enable-introspection",
+                          "--with-gtk=no",
                           "--enable-vala=no",
                           "--with-audio=no",
                           "--with-coroutine=gthread",
