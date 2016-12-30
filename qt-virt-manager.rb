@@ -5,7 +5,7 @@ class QtVirtManager < Formula
   #:revision => "875beaa0b5c9134f15f1bbd2d7b6040309a2d639",
   :revision => "911b4cbb7a153278fde461a8ba27a09f13b1167e",  # without daemonized
   :using => :git
-  version "0.37.57" # random version
+  version "0.37.57.1" # random version
   #sha256 "???"
 
   depends_on "intltool" => :build
