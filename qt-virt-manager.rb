@@ -2,9 +2,9 @@ class QtVirtManager < Formula
   desc "Qt5 Application for managing virtual machines"
   homepage "http://f1ash.github.io/qt-virt-manager/"
   url "https://github.com/F1ash/qt-virt-manager.git",
-  :revision => "2c54c3d5ec05380ea2faa4dd5556f28124575a31",
+  :revision => "d2bdc9b3f2a056f07f9c5f5518c79ec5d8a0c5ae",
   :using => :git
-  version "0.43.72" # random version
+  version "0.45.75" # random version
   #sha256 "???"
 
   depends_on "intltool" => :build
