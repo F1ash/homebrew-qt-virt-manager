@@ -4,7 +4,7 @@ class SpiceClientGlib2 < Formula
   url "https://www.spice-space.org/download/gtk/spice-gtk-0.34.tar.bz2"
   sha256 "e9720e01165f8451c9f3f58ad50e3afb990993b81cc2db86b3661b7ac5b976ee"
 
-  #depends_on "gobject-introspection" => :build
+  depends_on "gobject-introspection" => :build
   depends_on "intltool" => :build
   depends_on "libtool" => :build
   depends_on "gettext" => :build
