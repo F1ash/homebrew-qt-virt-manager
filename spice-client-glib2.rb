@@ -1,10 +1,10 @@
 class SpiceClientGlib2 < Formula
   desc "Glib2 client/common libraries for SPICE"
   homepage "http://www.spice-space.org"
-  url "http://www.spice-space.org/download/gtk/spice-gtk-0.31.tar.bz2"
-  sha256 "c72b4d202b1c0b71d6e24ce5caf914d6dddbcf4010d10db9c2d8e73af728c1ca"
+  url "https://www.spice-space.org/download/gtk/spice-gtk-0.34.tar.bz2"
+  sha256 "e9720e01165f8451c9f3f58ad50e3afb990993b81cc2db86b3661b7ac5b976ee"
 
-  depends_on "gobject-introspection" => :build
+  #depends_on "gobject-introspection" => :build
   depends_on "intltool" => :build
   depends_on "libtool" => :build
   depends_on "gettext" => :build
