@@ -1,4 +1,4 @@
-class Libxml2 < Formula
+class Libxml2Pythonless < Formula
   desc "GNOME XML library"
   homepage "http://xmlsoft.org/"
   url "http://xmlsoft.org/sources/libxml2-2.9.7.tar.gz"
