@@ -1,4 +1,5 @@
-# homebrew-qt-virt-manager
+# homebrew-qt-virt-manager  [![Build Status](https://travis-ci.org/F1ash/qt-virt-manager.svg?branch=master)](https://travis-ci.org/F1ash/qt-virt-manager)
+
 The HomeBrew formulaes for install QtVirtManager on OS X
 
 ## How to install?
