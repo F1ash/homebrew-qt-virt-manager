@@ -24,6 +24,7 @@ class SpiceClientGlib2 < Formula
                           "--with-gtk=no",
                           "--enable-vala=no",
                           "--with-audio=no",
+                          "--disable-opus",
                           "--with-coroutine=gthread",
                           "--prefix=#{prefix}"
     system "make", "install"
