@@ -7,7 +7,7 @@ The HomeBrew formulaes for install QtVirtManager on OS X
     brew tap F1ash/homebrew-qt-virt-manager
     brew install qt-virt-manager
 
-    If you have installed virt-manger, then for build and installed
+    If you have installed virt-manager, then for build and install
     qt-virt-manager try to do:
     brew tap F1ash/homebrew-qt-virt-manager
     brew install f1ash/qt-virt-manager/spice-protocol
