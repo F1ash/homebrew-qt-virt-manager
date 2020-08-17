@@ -8,6 +8,7 @@ class SpiceClientGlib2 < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext" => :build
+  depends_on "json-glib" => :build
 
   depends_on "glib"
   depends_on "cairo"
